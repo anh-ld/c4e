@@ -1,0 +1,39 @@
+.bg-lightblue {
+  background-color: lightblue;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-24 {
+  width: 24.6%;
+}
+
+.h-300px {
+  height: 300px;
+}
+
+.h-70 {
+  height: 70%;
+}
+
+.h-40 {
+  height: 40%;
+}
+
+.mr-10 {
+  margin: 10px auto;
+}
+
+.d-inline-block {
+  display: inline-block;
+}

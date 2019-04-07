@@ -1,0 +1,15 @@
+.text-red {
+  color: red;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.font-40px {
+  font-size: 40px;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}

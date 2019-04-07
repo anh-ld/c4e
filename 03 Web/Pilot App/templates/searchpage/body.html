@@ -1,0 +1,23 @@
+<div class="container pb-4">
+  <h2 class="text-center py-4">Our services</h2>
+  <div class="d-flex justify-content-between flex-wrap align-content-start pb-3">
+    {% for service in all_services %}
+      <div class="border border-grey rounded p-2 mx-1 my-4">
+        <div class="pb-2">
+          {% if service.image == None %}
+          <img src="http://via.placeholder.com/200x200" alt="placeholder image">
+          {% else %}
+          <img src="{{ service.image }}" alt="Avatar" width="200" height="200">
+          {% endif %}
+        </div>
+        <p class="width-200px font-18px">{{ service.name }}</p>
+        <p class="mb-2 width-200px"><i class="fas fa-birthday-cake"></i>&nbsp;{{ service.yob }}</p>
+        <p class="mb-2 width-200px"><i class="fas fa-long-arrow-alt-up"></i>&nbsp;&nbsp;{{ service.height }} cm</p>
+        <div class="d-flex justify-content-end">
+          <a class="text-info" href="{{ url_for('detail', service_id = service.id) }}">more</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <p class="text-center">end.</p>
+</div>

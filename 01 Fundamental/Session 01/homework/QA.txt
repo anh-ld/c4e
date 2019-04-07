@@ -1,0 +1,14 @@
+1.	How to check a variable’s type?
+	
+	By using type() function.
+	Example: type(“Hello”) will return <class ’str’>
+
+2. 	In what cases, you will get SyntaxError from the compiler telling you that some of your variables have invalid names? Can you give 3 different examples of invalid names?
+
+	You’ll get a syntax error when you give a variable an illegal name.
+	
+	Examples:
+	a variable's name does not begin with a letter or underscore. E.g: 17b
+	a variable's name contains illegal characters. E.g: th$
+	a variable's name is one of the Python keywords. E.g: import, if, …
+

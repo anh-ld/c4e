@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="p-2 m-3">
+      <h1 >Admin Page</h1>
+      <a href="{{ url_for('index') }}">Homepage</a><br>
+      <a href="{{ url_for('create') }}">Thêm nhân viên</a><br>
+      <a href="{{ url_for('order_list')}}">Xem các yêu cầu dịch vụ</a>
+    </div>
+
+    <br>
+
+    <table class="table table-sm">
+      <thead class="thead-light text-center">
+        <th class="align-middle">STT</th>
+        <th class="align-middle">Tên</th>
+        <th class="align-middle">Năm sinh</th>
+        <th class="align-middle">Giới tính</th>
+        <th class="align-middle">Chiều cao</th>
+        <th class="align-middle">SDT</th>
+        <th class="align-middle">Địa chỉ</th>
+        <th class="align-middle">Trạng thái</th>
+        <th class="align-middle">Mô tả</th>
+        <th class="align-middle">Số đo</th>
+        <th class="align-middle">Thao tác</th>
+      </thead>
+      <tbody>
+        {% for service in services %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ service.name }}</td>
+          <td>{{ service.yob }}</td>
+          <td>{{ "Nam" if service.gender == 1 else "Nữ" }}</td>
+          <td>{{ service.height }}</td>
+          <td>{{ service.phone }}</td>
+          <td>{{ service.address }}</td>
+          <td>{{ "Rảnh" if service.status else "Bận" }}</td>
+          <td>{{ service.description }}</td>
+          <td>
+            {% for measure in service.measurements %}
+              {{ measure }}
+            {% endfor %}
+          </td>
+
+          <td>
+            <a href="{{ url_for('update', service_id = service.id) }}">Sua</a>
+            <a href="{{ url_for('delete', service_id = service.id) }}">Xoa</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

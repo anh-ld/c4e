@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Male Customers</title>
+  </head>
+  <body>
+    <h1>Not contacted yet male customers</h1>
+    {% for customer in customers %}
+      <img src="../static/image/male-profile.jpg" alt="Avatar">
+      <p>Name: {{ customer.name }}</p>
+      <p>Gender: {{ "Male" if customer.gender == 1 else "Female" }}</p>
+      <p>Email: {{ customer.email }}</p>
+      <p>Phone number: {{ customer.phone }}</p>
+      <p>Job: {{ customer.job }}</p>
+      <p>Company: {{ customer.company }}</p>
+      <p>Contacted: {{ customer.contacted }}</p>
+      <hr>
+    {% endfor %}
+  </body>
+</html>

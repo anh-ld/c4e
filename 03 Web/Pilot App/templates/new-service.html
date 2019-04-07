@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mua Dong Khong Lanh</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+  <body class="container">
+    <h1 class="my-4">Thêm nhân viên mới</h1>
+    <form method="post">
+      <div class="form-group row">
+        <label class="col-sm-2">Tên</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="name" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2">Năm sinh</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" name="yob" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2">Địa chỉ</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="address" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2">SDT</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="phone" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2">Chiều cao</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" name="height" value="">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2">Mô tả</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="description" value="" size="50">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2">Số đo 3 vòng</label>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" name="meas0" value="" maxlength="3" size="3">
+        </div>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" name="meas1" value="" maxlength="3" size="3">
+        </div>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" name="meas2" value="" maxlength="3" size="3">
+        </div>
+      </div>
+
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-2 pt-0">Giới tính</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" value="0" checked>
+              <label class="form-check-label">
+                Female
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" value="1">
+              <label class="form-check-label">
+                Male
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-2 pt-0">Trạng thái</legend>
+          <div class="col-sm-10">
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="status" value="True" checked>
+              <label class="form-check-label">
+                Rảnh
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="status" value="False">
+              <label class="form-check-label">
+                Bận
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+</html>

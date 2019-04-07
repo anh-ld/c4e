@@ -1,0 +1,35 @@
+Q:
+1. What are the main functional differences between a while and a for?
+2. What’s the difference between break and continue?
+3. When is a loop’s else clause executed?
+4. How can you code a counter-based loop in Python?
+5. What can a range be used for in a for loop?
+
+A:
+1.
+The while loop repeatedly executes a block of statements as long as a condition at the top is true.
+The for loop steps through the items in any ordered sequence or other iterable object. 
+
+2.
+The break statement jumps out of the closest enclosing loop immediately.
+The continue statement immediately jumps to the top of the closest enclosing loop.
+
+3.
+The else clause runs once the loop is exited normally (i.e., without hitting a break).
+
+4.
+We can code a counter-based loop in Python by:
+- using counting variable with a while loop, i.e:
+	i = 10
+	while i >= 1:
+		print(i)
+		i -= 1
+- using range function with a for loop, i.e:
+	for i in range(10):
+		print(i)
+
+5.
+A range be used for:
+- executing a fixed number of repetitions, i.e: for i in range(10): …
+- skipping successive items as the loop executes, i.e: for i in range(0,10,2): …
+- iterating through offsets of items instead of items, i.e: for i in range(len(list1)): …

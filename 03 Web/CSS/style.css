@@ -1,0 +1,84 @@
+h1 {
+  color: red;
+}
+h2 {
+  /* color: green; */
+}
+#second-heading {
+  color: blue;
+  font-family: 'Gamja Flower', cursive;
+}
+.text-right {
+  text-align: right;
+}
+.bg-lightblue {
+  /* background-color: lightblue; */
+  background-color: #48C9B0;
+}
+
+.h-500px {
+  height: 500px;
+}
+
+.w-300px {
+  width: 300px;
+}
+
+.w-20 {
+  width: 20%;
+}
+.h-100px {
+  height: 100px;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.h-30px {
+  height: 30px;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-100px {
+  width: 100px;
+}
+
+.mr-60 {
+  margin: 0 59% 0 0;
+}
+
+.m-10px {
+  margin: 10px;
+}
+
+#parent {
+  padding: 10px 30px;
+}
+
+#center-element {
+  margin: 10px;
+  border: 1px solid black;
+}
+
+#background {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6GG7Yz0VFYpjk79qOIGc_OYOVD9LOoZsRjBFOgiMDK6oQdhggHg');
+  background-size: cover;
+  background-attachment: fixed; /* parallax */
+}
+
+#flex-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: space-between;
+  height: 400px
+}

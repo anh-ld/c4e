@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Admin</title>
+  </head>
+  <body>
+    <h1>Admin playground</h1>
+    <form method="post">
+      <label>Youtube Link</label>
+      <input type="text" name="link" value="">
+
+      <input type="submit">
+      <a href="{{ url_for('logout') }}">Đăng xuất</a>
+      <hr>
+      <table border="1px">
+        <thead>
+          <th>STT</th>
+          <th>Ten</th>
+          <th>Anh</th>
+          <th>Views</th>
+        </thead>
+        <tbody>
+          {% for video in videos %}
+            <tr>
+              <td>{{ loop.index }}</td>
+              <td>{{ video.title }}</td>
+              <td>{{ video.views }}</td>
+              <td><img src="{{ video.thumbnail }}" width="200" height="130" alt=""></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<div class="bg-white">
+  <h3 class="text-center py-4">Chào mừng các bạn đã đến với Mùa Đông Không Lạnh</h3>
+
+  <p class="font-lobster text-center pb-4">"Chúng tôi ở đây là để giúp bạn có mối quan hệ tốt đẹp với gia đình người thân trong khi vẫn giữ được sự tự do và riêng tư, cũng như quyết định của bản thân bạn"</p>
+
+  <div class="container d-flex justify-content-between pb-5">
+    <div class="bg-female col-md-5 h-180px d-flex align-items-center justify-content-end">
+      <a class="text-white px-4" href="{{ url_for('search', gender = 0) }}">Bạn là Nam</a>
+    </div>
+    <div class="bg-male col-md-5 h-180px d-flex align-items-center justify-content-start">
+      <a class="text-white px-4" href="{{ url_for('search', gender = 1) }}">Bạn là Nữ</a>
+    </div>
+  </div>
+</div>

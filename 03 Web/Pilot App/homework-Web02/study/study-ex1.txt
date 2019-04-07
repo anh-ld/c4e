@@ -1,0 +1,14 @@
+Are there any duplicate ids in the records? If yes, put screenshots of the records which are so in your answer
+If no, why? Guess what information this is field represents and its implication/application.
+
+No. There aren’t.
+Because, the ObjectId of each document is likely unique.
+
+This field is 12byte ObjectId value consists of:
+- a 4-byte value representing the seconds since the Unix epoch
+- a 3-byte machine identifier
+- a 2-byte process id
+- a 3-byte counter, starting with a random value.
+
+Application:
+id field is a primary key for every document. It’s used to organize documents, specify each document in collection (especially documents have the same value).

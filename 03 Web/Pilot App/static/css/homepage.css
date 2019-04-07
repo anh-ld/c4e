@@ -1,0 +1,46 @@
+.font-lobster {
+  font-family: 'Lobster', cursive;
+}
+
+.mb-250px {
+  margin-bottom: 250px;
+}
+
+.h-180px {
+  height: 180px;
+}
+
+.bg-female {
+  background-image: url(../../static/image/female.jpg);
+  background-size: cover;
+}
+
+.bg-male {
+  background-image: url(../../static/image/male.jpg);
+  background-size: cover;
+}
+
+.border-white {
+  border: 5px solid white;
+}
+
+.bg-night {
+  background-image: url(../../static/image/night.jpg);
+  background-size: cover;
+}
+
+.bg-c1c1c1 {
+  background-color: #c1c1c1;
+}
+
+.font-13px {
+  font-size: 13px;
+}
+
+.font-18px {
+  font-size: 18px;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
